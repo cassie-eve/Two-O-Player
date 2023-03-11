@@ -4,7 +4,6 @@ class Game
     @player_1 = Player.new('Player 1')
     @player_2 = Player.new('Player 2')
     @new_question = Question.new
-
   end
 
   def new
@@ -26,7 +25,12 @@ class Game
       puts 'Correct!'
     else
       puts 'NOPE'
+      lose_life(player)
     end
+  end
+
+  def lose_life(player)
+    player.lives -= 1
   end
 
   def show_score
