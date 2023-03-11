@@ -25,9 +25,9 @@ class Game
     @new_question.ask_question(player.name)
     input = gets.chomp
     if @new_question.correct(input)
-      puts 'Correct!'
+      puts 'YES! You are correct.'
     else
-      puts 'NOPE'
+      puts 'Seriously? No!'
       lose_life(player)
     end
   end
@@ -57,6 +57,7 @@ class Game
       puts "Player 1 wins with a score of #{@player_2.lives}/3!"
     end
     puts "----- GAME OVER -----"
+    puts "Good bye!"
     exit!
   end
 
